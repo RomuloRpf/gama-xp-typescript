@@ -50,3 +50,17 @@ criar({
     propriedade: 1
 });
 //criar('Nome') //Dá erro
+
+//Tipo Never - nunca vão ser encerrados
+function loopInfinito(): never{
+    while (true) {}
+}
+
+function erro(mensagem: string): never{
+    throw new Error(mensagem);
+}
+
+// No caso abaixo o typescript enetnde a função como tipo never por inferência
+function falha() {
+    return erro('Algo falhou');
+}
