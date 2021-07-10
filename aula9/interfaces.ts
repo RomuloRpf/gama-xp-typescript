@@ -1,5 +1,5 @@
 interface Usuario {
-    nome: string,
+    nome: string;
     email: string;
     address?: string;
 }
