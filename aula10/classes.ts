@@ -24,10 +24,8 @@ class Carro {
         private velocidadeMaxima: number = 220
     ) {}
 
-    alterarVelocidade(delta: number) {
-        if(this.velocidadeAtual + delta <= this.velocidadeMaxima){
-            this.velocidadeAtual += delta;
-        }
+    private alterarVelocidade(delta: number) {
+        //
     }
 
     acelerar() {
@@ -35,8 +33,7 @@ class Carro {
     }
 
     frear(){
-        const frenagem = -5;
-        this.velocidadeAtual -= frenagem;
+        this.alterarVelocidade(-5);
     }
 }
 
